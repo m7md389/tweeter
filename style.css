@@ -1,0 +1,84 @@
+body {
+    background-color: #ECF0F1;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav-container {
+    font-family: Fantasy;
+}
+
+.new-post-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 20px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#new-post-input {
+    color: grey;
+    font-size: 20px;
+}
+
+#twit-button {
+    background-color: #3498DB;
+    font-size: 25px;
+    box-shadow: 2px 2px grey;
+    border-radius: 2px;
+}
+
+.main-posts-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    box-shadow: 2px 2px grey;
+    border-radius: 7px;
+    border: 1px solid #b0b0b0;
+}
+
+.post-container {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* .post-text {} */
+
+.main-comments-container {
+    padding-left: 20px;
+}
+
+.comment-container {
+    height: 40px;
+}
+
+.comment-x {
+    height: 10px;
+    float: left;
+}
+
+.comment-text {
+    margin-left: 20px;
+}
+
+.new-comment-input {
+    height: 20px;
+    width: 200px;
+}
+
+.comment-button {
+    height: 25px;
+    width: 80px;
+}
+
+.delete-button {
+    background-color: red;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
