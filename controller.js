@@ -1,38 +1,49 @@
-const tweeter = Tweeter()
-const renderer = Renderer()
+const tweeter = Tweeter();
+const renderer = Renderer();
 
-const refresh = () => renderer.renderPosts(tweeter.getPosts())
-refresh()
+const refresh = () => renderer.renderPosts(tweeter.getPosts());
+refresh();
 
-$('#twit-button').on('click', function() {
-    const postText = $('#new-post-input').val()
-    if (postText.replace(/\s/g, '')) {
-        $('#new-post-input').val('')
-        tweeter.addPost(postText)
-    }
-    refresh()
-})
+$("#twit-button").on("click", function () {
+  const postText = $("#new-post-input").val();
+  if (postText.replace(/\s/g, "")) {
+    $("#new-post-input").val("");
+    tweeter.addPost(postText);
+  }
+  refresh();
+});
 
-$('.main-posts-container').on('click', '.comment-button', function() {
-    const commentText = $(this).closest('.add-comment-container').find('.new-comment-input').val()
-    if (commentText.replace(/\s/g, '')) {
-        tweeter.addComment(commentText, $(this).closest('.post-container').data('id'))
-    }
+$(".main-posts-container").on("click", ".comment-button", function () {
+  const commentText = $(this)
+    .closest(".add-comment-container")
+    .find(".new-comment-input")
+    .val();
+  const commentWriter = $(this)
+    .closest(".add-comment-container")
+    .find(".comment-writer")
+    .val();
+  if (commentText.replace(/\s/g, "") && commentWriter.replace(/\s/g, "")) {
+    tweeter.addComment(
+      commentText,
+      $(this).closest(".post-container").data("id"),
+      commentWriter
+    );
+  }
 
-    refresh()
-})
+  refresh();
+});
 
-$('.main-posts-container').on('click', '.comment-x', function() {
-    const postID = $(this).closest('.post-container').data('id')
-    const commentID = $(this).closest('.comment-container').data('id')
-    tweeter.removeComment(postID, commentID)
+$(".main-posts-container").on("click", ".comment-x", function () {
+  const postID = $(this).closest(".post-container").data("id");
+  const commentID = $(this).closest(".comment-container").data("id");
+  tweeter.removeComment(postID, commentID);
 
-    refresh()
-})
+  refresh();
+});
 
-$('.main-posts-container').on('click', '.delete-button', function() {
-    const postID = $(this).closest('.post-container').data('id')
-    tweeter.removePost(postID)
+$(".main-posts-container").on("click", ".delete-button", function () {
+  const postID = $(this).closest(".post-container").data("id");
+  tweeter.removePost(postID);
 
-    refresh()
-})
+  refresh();
+});
