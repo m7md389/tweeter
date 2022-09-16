@@ -17,14 +17,14 @@ main {
 
 .nav-container {
   background-color: #292b2c;
-  font-family: Fantasy;
   color: #0275d8;
+  font-family: Fantasy;
   font-size: 2rem;
+  letter-spacing: 0.3rem;
   padding: 2.5rem 4rem;
   position: fixed;
   top: 0;
   width: 100vw;
-  letter-spacing: 0.3rem;
   z-index: 10;
 }
 
@@ -36,8 +36,8 @@ main {
 }
 
 #new-post-input {
-  flex-grow: 1;
   color: grey;
+  flex-grow: 1;
   font-size: 2rem;
   padding: 1rem;
 }
@@ -48,8 +48,8 @@ main {
   box-shadow: 2px 2px grey;
   font-size: 3rem;
   font-weight: 600;
-  width: 15rem;
   padding: 1rem;
+  width: 15rem;
 }
 
 .post-container {
@@ -66,16 +66,16 @@ main {
 }
 
 .comment-container {
-  margin: 2rem;
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 1rem;
+  margin: 2rem;
 }
 
 .comment-x {
-  width: 1.25rem;
-  height: 1.25rem;
   bottom: -0.5rem;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 .comment-text {
@@ -126,6 +126,27 @@ main {
 }
 
 @media screen and (max-width: 720px) {
+  .nav-container {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+  }
+
+  .new-post-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 8rem;
+  }
+
+  #twit-button {
+    box-shadow: 2px 2px grey;
+    font-size: 2.5rem;
+    padding: 0.125rem;
+  }
+
+  .main-posts-container {
+    margin-top: 7rem;
+  }
+
   .add-comment-container {
     flex-direction: column;
   }
