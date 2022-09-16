@@ -8,10 +8,10 @@ const Renderer = function () {
   const addPosts = function (posts) {
     let postElement = ``;
 
-    for (post of posts) {
+    for (let post of posts) {
       postElement += `<div class="post-container" data-id=${post["id"]}>`; //// open <post-container>
 
-      postElement += `<h4 class="post-text">${post["text"]}</h4>`;
+      postElement += `<h2 class="post-text">${post["text"]}</h2>`;
 
       postElement += `<div class="main-comments-container">`; //// open <main-comments-container>
       for (comment of post["comments"]) {

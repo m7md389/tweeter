@@ -1,87 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
 body {
-    background-color: #ECF0F1;
-    padding-left: 30px;
-    padding-right: 30px;
+  background-color: #f7f7f7;
+}
+
+main {
+  margin: 4rem;
 }
 
 .nav-container {
-    font-family: Fantasy;
+  background-color: #292b2c;
+  font-family: Fantasy;
+  color: #0275d8;
+  font-size: 2rem;
+  padding: 2.5rem 4rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  letter-spacing: 0.3rem;
+  z-index: 10;
 }
 
 .new-post-container {
-    border-radius: 15px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 150px;
-    height: 50px;
+  display: flex;
+  gap: 2rem;
+  height: 50px;
+  margin-top: 12rem;
 }
 
 #new-post-input {
-    color: grey;
-    font-size: 20px;
+  flex-grow: 1;
+  color: grey;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 #twit-button {
-    background-color: #3498DB;
-    border-radius: 2px;
-    box-shadow: 2px 2px grey;
-    font-size: 25px;
-}
-
-.main-posts-container {
-    padding-inline: 15px;
+  background-color: #0275d8;
+  border-radius: 2px;
+  box-shadow: 2px 2px grey;
+  font-size: 3rem;
+  font-weight: 600;
+  width: 15rem;
+  padding: 1rem;
 }
 
 .post-container {
-    border-radius: 7px;
-    border: 1px solid #b0b0b0;
-    box-shadow: 2px 2px grey;
-    margin: 30px auto;
-    padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #b0b0b0;
+  box-shadow: 2px 2px grey;
+  margin: 2.5rem auto;
+  padding: 2rem;
 }
 
-.main-comments-container {
-    padding-inline-start: 20px;
+.post-text {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .comment-container {
-    height: 40px;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .comment-x {
-    float: left;
-    height: 10px;
-    margin-top:-6px;
-    padding: 10px;
-}
-
-.comment-x:hover{
-    cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+  bottom: -0.5rem;
 }
 
 .comment-text {
-    margin-inline-start: 20px;
+  font-size: 1.5rem;
 }
 
-.add-comment-container input{
-    margin-inline-end: 8px;
+.add-comment-container {
+  display: flex;
+  gap: 1rem;
 }
 
-.new-comment-input, .comment-writer {
-    height: 20px;
-    width: 200px;
+.add-comment-container input {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.new-comment-input {
+  width: 30rem;
+}
+
+.comment-writer {
+  width: 20rem;
 }
 
 .comment-button {
-    height: 25px;
-    width: 80px;
+  background-color: #5cb85c;
 }
 
 .delete-button {
-    background-color: red;
-    border-radius: 2px;
-    height: 30px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 100px;
+  background-color: #d9534f;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.comment-button,
+.delete-button,
+#twit-button {
+  border-radius: 3px;
+}
+
+#twit-button:hover,
+.comment-button:hover,
+.delete-button:hover,
+.comment-x:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .add-comment-container {
+    flex-direction: column;
+  }
+
+  .add-comment-container * {
+    width: 100%;
+  }
 }
